@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-nuevo-usuarop',
@@ -13,7 +14,8 @@ export class NuevoUsuaropComponent implements OnInit {
 
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private _usuarioService: UsuarioService
   ) { }
 
   getFormato(componente:string) {
